@@ -30,6 +30,10 @@ add_executable(rsp_tcp ${SOURCE_FILES} )
 target_link_libraries(rsp_tcp ${LIBSDRPLAY_LIBRARIES} Threads::Threads)
 install(TARGETS rsp_tcp DESTINATION bin)
 
+add_executable(rsp_stdout rsp_stdout.c )
+target_link_libraries(rsp_stdout ${LIBSDRPLAY_LIBRARIES} Threads::Threads)
+install(TARGETS rsp_stdout DESTINATION bin)
+
 set(CPACK_GENERATOR DEB)
 set(CPACK_PACKAGE_VENDOR "F4FHH Nicolas")
 set(CPACK_PACKAGE_CONTACT "F4FHH Nicolas (f4fhh@ducor.fr)")
